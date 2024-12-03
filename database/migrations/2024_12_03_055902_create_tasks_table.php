@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title')->unique();
             $table->text('description')->nullable();
             $table->boolean('is_completed')->default(null);
+            $table->date('createdAt');
             $table->timestamps();
         });
     }

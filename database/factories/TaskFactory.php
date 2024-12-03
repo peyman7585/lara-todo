@@ -19,7 +19,8 @@ class TaskFactory extends Factory
         return [
             'title'=>$this->faker->sentence(),
             'description'=>$this->faker->paragraph(),
-            'is_completed'=>rand(0,1)
+            'is_completed'=>rand(0,1),
+            'createdAt'=>now()
         ];
     }
 }

@@ -34,7 +34,8 @@ class TaskController extends Controller
      $create= Task::create([
             'title'=>$request->title,
             'description'=>$request->description,
-            'is_completed'=>$request->is_completed
+            'is_completed'=>$request->is_completed,
+            'createdAt'=>now()
         ]);
         return response()->json([
             'data'=>$create,
