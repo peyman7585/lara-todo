@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->text('description')->nullable();
-            $table->boolean('is_completed')->default(null);
+            $table->boolean('is_completed');
             $table->date('createdAt');
             $table->timestamps();
+
         });
     }
 

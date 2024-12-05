@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $tasks=Task::paginate(8);
+        $tasks = Task::paginate(8);
         return response()->json($tasks);
     }
 
@@ -83,4 +84,5 @@ class TaskController extends Controller
             'message'=>__('validation.delete_task')
         ],200);
     }
+
 }
